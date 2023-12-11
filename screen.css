@@ -10,12 +10,14 @@ html {
   }
   .welcome{
     flex-direction: column;
+    margin: 100px;
   }
   .welcome h1 {
-    padding-top: 10%;
+    padding-top: 5%;
   }
   .welcome img{
-    padding-top: 10%;
+    padding-top: 2%;
+    padding-bottom: 5%;
     animation: rotation 15s  5s linear infinite;
   }
   .bg1 {
@@ -174,6 +176,11 @@ html {
     background-color: #50d100;
   }
 
+  img {
+    height: auto; 
+    max-width: 100%;
+  }
+    
   @keyframes move {
     0%{background-position: 0  0;}
     50%{background-position: -13px -13px;}
