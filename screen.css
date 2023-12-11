@@ -19,24 +19,25 @@ html {
     animation: rotation 15s  5s linear infinite;
   }
   .bg1 {
+    background: #af0000;
     background-image: url(src/testimage.png);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
     animation: move 15s linear infinite;
   }
   .bg2 {
+    background: #0a61f6;
     background-image: url(src/testimage3.png);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
     animation: move 15s linear infinite;
   }
   .bg3 {
+    background: #50d100;
     background-image: url(src/testimage2.png);
     background-attachment: fixed;
     background-position: center;
@@ -52,7 +53,6 @@ html {
     
     color: rgb(255, 255, 255);
     border-top: 10px solid #000000;
-    background: #af0000;
   }
   
   header {
@@ -60,7 +60,7 @@ html {
   }
 
   header h1 {
-    margin: 5px;
+    margin: -5px;
     text-align: center;
   }
 
@@ -101,7 +101,7 @@ html {
   .navactive {
     background-color: #a70000;
   }
-  
+
   nav li a:hover:not(.active){
     background-color: #111;
   }
@@ -150,13 +150,28 @@ html {
   section .text-container .text-box{
     margin: 20px;
     padding: 20px;
-    background: #b81515;
+    
   }
   section .text-container .text-box h3{
     font-size: 30px;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 10px;
+  }
+
+  .swR {
+    background: #a70000;
+    background-color: #a70000;
+  }
+
+  .swB {
+    background-color: #0a61f6;
+    background: #0a61f6;
+  }
+
+  .swG {
+    background: #50d100;
+    background-color: #50d100;
   }
 
   @keyframes move {
