@@ -6,7 +6,7 @@ html {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 35%;
+    width: 40%;
   }
   .welcome{
     flex-direction: column;
@@ -22,7 +22,7 @@ html {
     background-image: url(src/testimage.png);
     background-attachment: fixed;
     background-position: center;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: cover;
 
     animation: move 15s linear infinite;
@@ -31,7 +31,7 @@ html {
     background-image: url(src/testimage3.png);
     background-attachment: fixed;
     background-position: center;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: cover;
 
     animation: move 15s linear infinite;
@@ -40,20 +40,12 @@ html {
     background-image: url(src/testimage2.png);
     background-attachment: fixed;
     background-position: center;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: cover;
 
     animation: move 15s linear infinite;
   }
-  @keyframes move {
-    0%{background-position: 0  0;}
-    50%{background-position: -13px -13px;}
-    100%{background-position: 0  0;}
-  }
-  @keyframes rotation {
-    0%{transform: rotate(0)}
-    100%{transform: rotate(360deg)}
-  }
+
   body{
     font-family:Arial, Helvetica, sans-serif;
     margin:  20px;
@@ -116,13 +108,20 @@ html {
 
   .reveal{
     position: relative;
-    transform: translateY(150px);
     opacity: 0;
     transition: 2s all ease;
   }
   .reveal.active{
-    transform: translateY(0);
     opacity: 1;
+  }
+  .active.fade-bottom {
+    animation: fade-bottom 1s ease-in;
+  }
+  .active.fade-left {
+    animation: fade-left 1s ease-in;
+  }
+  .active.fade-right {
+    animation: fade-right 1s ease-in;
   }
   
   section{
@@ -160,7 +159,51 @@ html {
     margin-bottom: 10px;
   }
 
+  @keyframes move {
+    0%{background-position: 0  0;}
+    50%{background-position: -13px -13px;}
+    100%{background-position: 0  0;}
+  }
+  @keyframes rotation {
+    0%{transform: rotate(0)}
+    100%{transform: rotate(360deg)}
+  }
+
+  @keyframes fade-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-right {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
   @media screen and (max-width: 616px) {
+    .bg1 .bg2 .bg3 {
+        background-attachment: scroll;
+    }
     header {
       background: #ED254E;
       display: block;
