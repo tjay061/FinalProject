@@ -35,7 +35,8 @@ html {
     background-size: cover;
 
     animation: move 15s linear infinite;
-  }.bg3 {
+  }
+  .bg3 {
     background-image: url(src/testimage2.png);
     background-attachment: fixed;
     background-position: center;
